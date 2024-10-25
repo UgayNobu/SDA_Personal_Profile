@@ -1,0 +1,113 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+.container {
+    width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.left-column {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.profile-img img {
+    width: 100%;
+    height: auto;
+}
+
+.name {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.profession {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about h3, .contact h3 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.about {
+    margin-top: 20px;
+}
+
+.about p {
+    text-align: center;
+}
+
+.contact {
+    margin-top: 30px;
+}
+
+.contact p {
+    text-align: center;
+}
+
+.contact strong {
+    display: block;  
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.right-column {
+    padding: 20px;
+    background-color: white;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.item {
+    margin-bottom: 20px;
+}
+
+.item p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: black;
+}
