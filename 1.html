@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ugay's Personal Profile</title>
+  <link rel="stylesheet" href="1.css">
+</head>
+<body>
+  <div class="progress-container">
+    <div class="circular-progress">
+      <span class="progress-value">0%</span>
+    </div>
+  </div>
+
+  <script>
+    const progressValue = document.querySelector('.progress-value');
+    const circularProgress = document.querySelector('.circular-progress');
+
+    let progressStartValue = 0,
+        progressEndValue = 78, // You can modify this to any percentage value.
+        speed = 50;
+
+    let progress = setInterval(() => {
+      progressStartValue++;
+      
+      // Update percentage text
+      progressValue.textContent = `${progressStartValue}%`;
+
+      // Update the circular progress by modifying its background
+      circularProgress.style.background = `conic-gradient(
+        #00ff00 ${progressStartValue * 3.6}deg, /* Adjust the angle */
+        #000000 ${progressStartValue * 3.6}deg /* Ensure the remaining part is black */
+      )`;
+      
+      if (progressStartValue === progressEndValue) {
+        clearInterval(progress);
+      }
+    }, speed);
+  </script>
+     <script>
+      // JavaScript to redirect after a delay
+      document.addEventListener("DOMContentLoaded", function() {
+          setTimeout(function() {
+              window.location.href = "2.html"; // 
+          }, 5000); // Delay in milliseconds (e.g., 5000 ms = 5 seconds)
+      });
+  </script>
+</body>
+</html>

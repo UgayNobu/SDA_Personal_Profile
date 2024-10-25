@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get in Touch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <section style="background-color: black; color: white; padding: 50px 0; text-align: center; font-family: Arial, sans-serif;">
+        <div style="max-width: 500px; margin: 0 auto;">
+          <h2 style="font-size: 32px; font-weight: bold; margin-bottom: 20px;">Get In Touch</h2>
+          <p style="margin-bottom: 40px; line-height: 1.6;">
+            Learning and improving yourself is important for growth, but it often requires hard work and can be challenging, making it essential to overcome these obstacles to achieve your goals.
+          </p>
+          <form style="display: flex; flex-direction: column; gap: 20px;">
+            <input type="email" name="email" placeholder="Please enter your email" style="padding: 15px; border-radius: 5px; border: 1px solid #ccc; font-size: 16px;">
+            <input type="text" name="mobile" placeholder="Enter mobile" style="padding: 15px; border-radius: 5px; border: 1px solid #ccc; font-size: 16px;">
+            <textarea name="message" rows="5" placeholder="Enter your message" style="padding: 15px; border-radius: 5px; border: 1px solid #ccc; font-size: 16px;"></textarea>
+            <button type="submit" style="padding: 15px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
+              Submit &rarr;
+            </button>
+          </form>
+        </div>
+        <footer style="background-color: #1a1a1a; margin-top: 50px; padding: 20px 0; color: #666666;">
+          <p>&copy; 2024 [UGYEN]. All Rights Reserved. <span style="color: red;">&hearts;</span></p>
+        </footer>
+      </section>
+
+      <script>
+        // Function to navigate to the next page
+        function goToNextPage() {
+            window.location.href = "2.html"; 
+        }
+
+        // Event listener for keydown events
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") { 
+                goToNextPage();
+            }
+        });
+    </script>
+
+    
+</body>
+</html>
