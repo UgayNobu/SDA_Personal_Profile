@@ -1,203 +1,304 @@
+/* Reset some default browser styling */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #000;
-    color: #fff;
-  }
+/* Apply base styles to the body */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
 
+/* Navigation Bar Styles */
+nav {
+  background-color: #333;
+  text-align: center;
+  padding: 10px 0;
+}
 
-  nav {
-    background-color: #1e1e1e;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-  }
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+}
 
-  nav a {
-    color: #ccc;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
+nav a:hover {
+  background-color: #575757;
+}
 
-  nav a:hover {
-    color: #fff;
-  }
+/* Container and Profile Section */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  flex-wrap: wrap;
+}
 
+.profile-text {
+  max-width: 600px;
+}
 
+.profile-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.profile-text p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+.profile-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Worked With Section */
+.worked-with {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.partners {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.partners img {
+  max-width: 100%;
+  height: auto;
+  width: 120px;
+}
+
+/* Case Studies Section */
+.case-studies {
+  padding: 60px 0;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.case-study {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-direction: column; /* Default stack order for smaller screens */
+}
+
+.case-study-content {
+  max-width: 500px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.case-study-content h3 {
+  margin-top: 20px;
+  font-size: 1.8rem;
+}
+
+.case-study-content .tag {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.case-study img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Testimonials Section */
+.text-center {
+  text-align: center;
+}
+
+.testimonial {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.testimonial p {
+  font-size: 1.2rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.testimonial .testimonial-author {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.testimonial img {
+  max-width: 100px;
+  height: auto;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+/* Recent Work Section */
+.recent-work {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.recent-work .card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.recent-work .card img {
+  width: 100%;
+  height: auto;
+}
+
+.recent-work .card-content {
+  padding: 20px;
+}
+
+.recent-work .card-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.recent-work .card-content p {
+  font-size: 1.1rem;
+  color: #777;
+}
+
+/* Form Section */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form input, form textarea {
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+form button {
+  padding: 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+footer .heart {
+  color: red;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
   .container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: calc(100vh - 100px);
-    padding: 20px;
-  }
-
-  .profile-text {
-    max-width: 500px;
-  }
-
-  .profile-text h1 {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-
-  .profile-text p {
-    font-size: 16px;
-    line-height: 1.7;
-    margin-bottom: 40px;
-    color: #aaa;
-  }
-
-
-  .profile-text .btn {
-    background-color: #32CD32;
-    color: #000;
-    padding: 12px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    text-decoration: none;
-  }
-
-  .profile-text .btn:hover {
-    background-color: #28a745;
-  }
-
-
-  .profile-image {
-    border-radius: 50%;
-    overflow: hidden;
-    width: 250px;
-    height: 250px;
-  }
-
-  .profile-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .worked-with {
-    text-align: center;
-    margin-top: 50px;
-  }
-
-  .worked-with p {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-
-  .partners {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-  }
-
-  .partners img {
-    width: 100px;
-    filter: grayscale(100%);
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-  }
-
-  .partners img:hover {
-    opacity: 1;
-  }
-
-  .case-studies {
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 20px;
-    color: #333;
-    background-color: #fff;
-  }
-
-  .case-studies h2 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    color: #000;
+      flex-direction: column;
+      align-items: center;
   }
 
   .case-study {
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      flex-direction: column;
   }
 
-  .case-study:nth-child(even) {
-    flex-direction: row; 
+  .worked-with {
+      padding: 30px 0;
   }
 
-  .case-study:nth-child(odd) {
-    flex-direction: row-reverse; 
+  .partners img {
+      width: 100px;
   }
 
-  .case-study img {
-    width: 300px;
-    height: auto;
-    margin-left: 20px;
+  .recent-work {
+      flex-direction: column;
+      align-items: center;
   }
 
-  .case-study-content {
-    max-width: 500px;
-    font-size: 16px;
+  .recent-work .card {
+      width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  nav a {
+      padding: 10px;
   }
 
-  .case-study h3 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
+  .profile-text h1 {
+      font-size: 2rem;
   }
 
-  .case-study p {
-    margin-bottom: 20px;
+  .profile-text p {
+      font-size: 1rem;
   }
 
-  .case-study .tag {
-    background-color: #FFD700;
-    color: #fff;
-    padding: 5px 10px;
-    font-size: 12px;
-    border-radius: 8px;
-    display: inline-block;
-    margin-bottom: 10px;
+  .btn {
+      padding: 10px 15px;
+      font-size: 14px;
   }
 
-  .case-study .btn {
-    display: inline-block;
-    background-color: #32CD32;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
+  .case-study-content h3 {
+      font-size: 1.4rem;
   }
 
-  .case-study .btn.blue {
-    background-color: #007bff;
+  .testimonial p {
+      font-size: 1rem;
   }
-
-  .case-study .btn:hover {
-    background-color: #28a745;
-  }
-
-  .case-study .btn.blue:hover {
-    background-color: #0056b3;
-  }
+}
