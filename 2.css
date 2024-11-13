@@ -102,7 +102,7 @@ nav a:hover {
 }
 
 .case-studies h2 {
-  color: black; /* Black header */
+  color: black; /* Set header color to black */
   font-size: 2.5rem;
   margin-bottom: 40px;
 }
@@ -112,7 +112,12 @@ nav a:hover {
   justify-content: space-between;
   margin-bottom: 30px;
   flex-wrap: wrap;
-  gap: 20px; /* Space between items */
+}
+
+.case-study img {
+  max-width: 600px;
+  height: auto;
+  object-fit: cover;
 }
 
 .case-study-content {
@@ -127,18 +132,12 @@ nav a:hover {
 .case-study-content h3 {
   margin-top: 20px;
   font-size: 1.8rem;
-  color: black; /* Case study title in black */
+  color: black;
 }
 
 .case-study-content p {
   font-size: 1.1rem;
-  color: #555; /* Text color */
-}
-
-.case-study img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+  color: #555;
 }
 
 /* Mobile Responsiveness */
@@ -160,6 +159,10 @@ nav a:hover {
   .case-study {
       flex-direction: column;
       text-align: center;
+  }
+
+  .case-study img {
+      max-width: 100%;
   }
 
   .case-study-content {
