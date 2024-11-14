@@ -63,11 +63,11 @@ nav a:hover {
 /* Buttons */
 .btn {
   display: inline-block;
-  background-color: #0cf800; /* Updated to match the right image */
+  background-color: #0cf800;
   color: white;
-  padding: 12px 25px; /* More padding for better look */
+  padding: 12px 25px;
   text-decoration: none;
-  border-radius: 8px; /* Rounded edges */
+  border-radius: 8px;
   margin-top: 20px;
   font-size: 1rem;
   font-weight: bold;
@@ -75,6 +75,37 @@ nav a:hover {
 
 .btn:hover {
   background-color: #ff9800;
+}
+
+/* Worked With Section */
+.worked-with {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.worked-with-item {
+  background-color: #333;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 60px;
+}
+
+.worked-with-item img {
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.worked-with-item img:hover {
+  opacity: 1;
 }
 
 /* Case Studies Section */
@@ -85,16 +116,16 @@ nav a:hover {
 }
 
 .case-studies h2 {
-  color: black; /* Set header color to black */
+  color: black;
   font-size: 2.5rem;
-  margin-bottom: 20px; /* Reduced margin for better spacing */
+  margin-bottom: 20px;
 }
 
 .case-studies p {
   font-size: 1.2rem;
-  color: #ccc; /* Light gray for intro text */
+  color: #ccc;
   font-style: italic;
-  margin-bottom: 30px; /* More space after intro text */
+  margin-bottom: 30px;
 }
 
 /* Case Study Section Styling */
@@ -102,14 +133,14 @@ nav a:hover {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-items: center; /* Align content vertically */
+  align-items: center;
   margin-bottom: 40px;
 }
 
 .case-study img {
-  max-width: 45%; /* Image takes slightly less width */
+  max-width: 45%;
   height: auto;
-  border-radius: 8px; /* Rounded image corners */
+  border-radius: 8px;
   object-fit: cover;
 }
 
@@ -118,7 +149,7 @@ nav a:hover {
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for modern look */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: left;
 }
 
@@ -150,57 +181,62 @@ nav a:hover {
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   .container {
-      flex-direction: column;
-      padding: 20px;
+    flex-direction: column;
+    padding: 20px;
   }
 
   .profile-text {
-      text-align: center;
+    text-align: center;
   }
 
   .profile-image img {
-      width: 200px;
-      height: 200px;
+    width: 200px;
+    height: 200px;
   }
 
   .case-study {
-      flex-direction: column;
-      text-align: center;
+    flex-direction: column;
+    text-align: center;
   }
 
   .case-study img {
-      max-width: 100%;
-      margin-bottom: 20px;
+    max-width: 100%;
+    margin-bottom: 20px;
   }
 
   .case-study-content {
-      margin-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .worked-with {
+    flex-wrap: wrap;
+    gap: 15px;
   }
 }
 
 @media (max-width: 480px) {
   nav {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   nav a {
-      margin-bottom: 10px;
+    margin-bottom: 10px;
   }
 
   .profile-text h1 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .profile-text p {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   .case-studies h2 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .case-study-content h3 {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 }
