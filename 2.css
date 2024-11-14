@@ -79,34 +79,55 @@ nav a:hover {
 
 /* Worked With Section */
 .worked-with {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
+  text-align: center;
+  padding: 40px;
+  background-color: #000;
+  color: #fff;
 }
 
-.worked-with-item {
-  background-color: #333;
-  padding: 10px 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+.worked-with h3 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+/* Flexbox Layout for Logos in a Row */
+.worked-with-logos {
+  display: flex;                  /* Flexbox for horizontal alignment */
+  justify-content: center;         /* Center the logos */
+  align-items: center;             /* Align logos vertically */
+  gap: 20px;                       /* Space between logos */
+}
+
+.worked-with-logos div {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 10px;                   /* Padding around logos */
+  border-radius: 10px;
+  width: auto;                     /* Auto width to fit images */
+  height: auto;                    /* Auto height */
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 120px;
-  height: 60px;
+  transition: background-color 0.3s;
 }
 
-.worked-with-item img {
-  max-width: 100%;
-  max-height: 100%;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
+.worked-with-logos img {
+  max-width: 100px;                /* Set maximum width for logos */
+  height: auto;                    /* Adjust height proportionally */
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
 }
 
-.worked-with-item img:hover {
+.worked-with-logos div:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.worked-with-logos img:hover {
   opacity: 1;
 }
+
+
+
+
 
 /* Case Studies Section */
 .case-studies {
