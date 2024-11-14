@@ -31,7 +31,7 @@ nav a:hover {
   justify-content: space-between;
   align-items: center;
   padding: 40px;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .profile-text {
@@ -92,18 +92,19 @@ nav a:hover {
 
 /* Flexbox Layout for Logos in a Row */
 .worked-with-logos {
-  display: flex;                  /* Flexbox for horizontal alignment */
-  justify-content: center;         /* Center the logos */
-  align-items: center;             /* Align logos vertically */
-  gap: 20px;                       /* Space between logos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Wrap logos on smaller screens */
 }
 
 .worked-with-logos div {
   background-color: rgba(255, 255, 255, 0.05);
-  padding: 10px;                   /* Padding around logos */
+  padding: 10px;
   border-radius: 10px;
-  width: auto;                     /* Auto width to fit images */
-  height: auto;                    /* Auto height */
+  width: auto;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -111,8 +112,8 @@ nav a:hover {
 }
 
 .worked-with-logos img {
-  max-width: 100px;                /* Set maximum width for logos */
-  height: auto;                    /* Adjust height proportionally */
+  max-width: 100px;
+  height: auto;
   filter: brightness(0) invert(1);
   opacity: 0.8;
 }
@@ -124,10 +125,6 @@ nav a:hover {
 .worked-with-logos img:hover {
   opacity: 1;
 }
-
-
-
-
 
 /* Case Studies Section */
 .case-studies {
@@ -229,9 +226,8 @@ nav a:hover {
     margin-bottom: 20px;
   }
 
-  .worked-with {
-    flex-wrap: wrap;
-    gap: 15px;
+  .worked-with-logos {
+    gap: 15px; /* Adjusted gap for smaller screens */
   }
 }
 
