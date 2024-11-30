@@ -3,26 +3,23 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
-  color: #333;
+  background-color: #000;
+  color: #fff;
 }
 
 /* Navigation Bar */
 nav {
   display: flex;
-  justify-content: space-around;
-  background-color: #333;
-  padding: 10px 0;
+  justify-content: flex-start;
+  gap: 40px;
+  padding: 20px;
+  background-color: transparent;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  font-size: 1.2rem;
-}
-
-nav a:hover {
-  color: #4CAF50;
+  font-size: 1.1rem;
 }
 
 /* Profile Section */
@@ -30,34 +27,41 @@ nav a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px;
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  padding: 100px 80px;
+  gap: 40px;
 }
 
 .profile-text {
-  max-width: 600px;
+  flex: 1;
+  max-width: 50%;
 }
 
 .profile-text h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   margin-bottom: 20px;
+  color: #0cf800;
 }
 
 .profile-text p {
-  font-size: 1.2rem;
-  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #aaa;
+  margin-bottom: 40px;
 }
 
 .profile-image {
-  max-width: 300px;
-  width: 100%;
+  flex: 1;
+  max-width: 35%;
+  display: flex;
+  justify-content: center;
 }
 
 .profile-image img {
-  width: 100%;
+  width: 90%;
   height: auto;
   border-radius: 50%;
-  object-fit: cover;
+  border: 4px solid #0cf800;
+  box-shadow: 0 10px 20px rgba(0, 255, 0, 0.4);
 }
 
 /* Buttons */
@@ -67,271 +71,157 @@ nav a:hover {
   color: white;
   padding: 12px 25px;
   text-decoration: none;
-  border-radius: 8px;
-  margin-top: 20px;
+  border-radius: 25px;
   font-size: 1rem;
   font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #ff9800;
+  background-color: #0ab100;
+  transform: translateY(-2px);
 }
 
 /* Worked With Section */
 .worked-with {
   text-align: center;
-  padding: 40px;
-  background-color: #000;
-  color: #fff;
+  padding: 40px 0;
 }
 
 .worked-with h3 {
-  font-size: 1.8em;
-  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
 }
 
-/* Flexbox Layout for Logos in a Row */
 .worked-with-logos {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap; /* Wrap logos on smaller screens */
-}
-
-.worked-with-logos div {
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 10px;
-  border-radius: 10px;
-  width: auto;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s;
+  gap: 50px;
 }
 
 .worked-with-logos img {
   max-width: 100px;
   height: auto;
-  filter: brightness(0) invert(1);
-  opacity: 0.8;
-}
-
-.worked-with-logos div:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  filter: brightness(0) invert(0.5);
+  transition: filter 0.3s ease;
 }
 
 .worked-with-logos img:hover {
-  opacity: 1;
+  filter: brightness(0) invert(0.8);
 }
 
 /* Case Studies Section */
 .case-studies {
-  padding: 60px 0;
-  background-color: #f4f4f4;
-  text-align: center;
+  padding: 80px 60px;
+  background-color: #fff;
+  color: #000;
 }
 
 .case-studies h2 {
-  color: black;
   font-size: 2.5rem;
+  text-align: center;
   margin-bottom: 20px;
 }
 
-.case-studies p {
-  font-size: 1.2rem;
-  color: #ccc;
-  font-style: italic;
-  margin-bottom: 30px;
+.case-studies > p {
+  text-align: center;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto 50px;
 }
 
-/* Case Study Section Styling */
+/* Case Study Items */
 .case-study {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 40px;
+  padding: 30px 0;
+  gap: 40px;
+  border-bottom: 1px solid #ddd;
 }
 
-.case-study img {
-  max-width: 45%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
+.case-study:last-child {
+  border-bottom: none;
+}
+
+.case-study:nth-child(even) {
+  flex-direction: row-reverse;
 }
 
 .case-study-content {
+  flex: 1;
   max-width: 50%;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  text-align: left;
 }
 
 .case-study-content h3 {
-  margin-top: 10px;
-  font-size: 2rem;
-  color: black;
-  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
 }
 
 .case-study-content p {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
 }
 
-/* Fintech Tag Styling */
-.case-study .tag {
+.case-study img {
+  flex: 1;
+  max-width: 40%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.tag {
   display: inline-block;
-  background-color: #ffe4b3;
-  color: #333;
-  padding: 5px 15px;
+  padding: 6px 15px;
   border-radius: 20px;
   font-size: 0.9rem;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-weight: 500;
+  margin-bottom: 15px;
 }
 
-/* Mobile Responsiveness */
-/* Large Devices (Desktops) */
-@media (max-width: 1200px) {
+.tag.fintech {
+  background-color: #ffe4b3;
+  color: #b45309;
+}
+
+.tag.edtech {
+  background-color: #e0e7ff;
+  color: #3730a3;
+}
+
+.tag.pharma {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
   .container {
+    flex-direction: column;
     padding: 30px;
   }
 
-  .profile-text {
-    max-width: 500px;
+  .profile-text, .profile-image {
+    max-width: 100%;
   }
 
-  .case-study-content {
-    max-width: 45%;
-  }
-}
-
-/* Medium Devices (Tablets) */
-@media (max-width: 992px) {
   .profile-text h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 
-  .worked-with-logos img {
-    max-width: 80px;
-  }
-
-  .case-study-content {
-    max-width: 100%;
-    margin: 20px 0;
-  }
-
-  .case-study img {
-    max-width: 100%;
+  .worked-with-logos {
+    flex-wrap: wrap;
+    gap: 20px;
   }
 
   .case-study {
     flex-direction: column;
-  }
-}
-
-/* Small Devices (Tablets & Large Phones) */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    padding: 20px;
-    gap: 30px;
+    gap: 20px;
   }
 
-  .profile-text {
-    text-align: center;
+  .case-study-content, .case-study img {
     max-width: 100%;
-  }
-
-  .profile-image {
-    max-width: 250px;
-  }
-
-  .worked-with-logos {
-    gap: 15px;
-  }
-
-  .worked-with-logos img {
-    max-width: 70px;
-  }
-}
-
-/* Extra Small Devices (Phones) */
-@media (max-width: 576px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-    padding: 15px 0;
-  }
-
-  nav a {
-    margin: 8px 0;
-    font-size: 1.1rem;
-  }
-
-  .profile-text h1 {
-    font-size: 1.8rem;
-  }
-
-  .profile-text p {
-    font-size: 1rem;
-  }
-
-  .profile-image {
-    max-width: 200px;
-  }
-
-  .btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
-
-  .worked-with h3 {
-    font-size: 1.5em;
-  }
-
-  .worked-with-logos {
-    gap: 10px;
-  }
-
-  .worked-with-logos img {
-    max-width: 60px;
-  }
-
-  .case-studies h2 {
-    font-size: 1.8rem;
-  }
-
-  .case-study-content h3 {
-    font-size: 1.3rem;
-  }
-
-  .case-study-content p {
-    font-size: 1rem;
-  }
-}
-
-/* Extra Extra Small Devices */
-@media (max-width: 375px) {
-  .container {
-    padding: 15px;
-  }
-
-  .profile-text h1 {
-    font-size: 1.6rem;
-  }
-
-  .worked-with-logos img {
-    max-width: 50px;
-  }
-
-  .case-study-content {
-    padding: 15px;
   }
 }
