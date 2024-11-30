@@ -3,48 +3,149 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ugay's Personal Profile</title>
-  <link rel="stylesheet" href="index.css">
+  <title>Profile Page</title>
+  <link rel="stylesheet" href="2.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <div class="progress-container">
-    <div class="circular-progress">
-      <span class="progress-value">0%</span>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav-toggle" id="navToggle">☰</div>
+    <div class="nav-links">
+      <a href="2.html">Home</a>
+      <a href="6.html">Case Studies</a>
+      <a href="4.html">Testimonials</a>
+      <a href="5.html">Recent Work</a>
+      <a href="7.html">Get In Touch</a>
+    </div>
+  </nav>
+
+  <!-- Main Profile Section -->
+  <div class="container">
+    <div class="profile-text">
+      <h1>Ugyen Norbu</h1>
+      <p>Intro text: software engineer and UI designer with a passion for building intuitive and efficient digital experiences...</p>
+      <a href="3.html" class="btn">About Me ></a>
+    </div>
+    <div class="profile-image">
+      <a href="8.html">
+        <img src="../SDA_Personal_Profile/ugyen ai.webp" alt="Profile Picture" loading="lazy">
+      </a>
     </div>
   </div>
 
+  <!-- Worked With Section -->
+  <div class="worked-with">
+    <h3>Worked with</h3>
+    <div class="worked-with-logos">
+      <!-- Add loading="lazy" to all images -->
+      <div><img src="../SDA_Personal_Profile/images/1.png" alt="ClickUp" loading="lazy"></div>
+      <div><img src="../SDA_Personal_Profile/images/2.png" alt="Dropbox" loading="lazy"></div>
+      <div><img src="../SDA_Personal_Profile/images/3.png" alt="Paychex" loading="lazy"></div>
+      <div><img src="../SDA_Personal_Profile/images/4.png" alt="Elastic" loading="lazy"></div>
+      <div><img src="../SDA_Personal_Profile/images/5.png" alt="Stripe" loading="lazy"></div>
+    </div>
+  </div>
+
+  <!-- Case Studies Section -->
+  <div class="case-studies">
+    <h2>Case Studies</h2>
+    <div class="case-studies-container">
+      <!-- Modified case study structure -->
+      <div class="case-study">
+        <div class="case-study-content">
+          <div class="tag">Fintech</div>
+          <h3>Food Delivery Website</h3>
+          <p>I have been focused on learning and improving myself...</p>
+          <a href="#" class="btn">View case study ></a>
+        </div>
+        <div class="case-study-image">
+          <img src="../SDA_Personal_Profile/food delivery.webp" alt="Food Delivery Website" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Repeat structure for other case studies -->
+      <!-- ... -->
+    </div>
+  </div>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>Testimonials</h2>
+    <p class="testimonials-intro">Pain itself is important...</p>
+    <div class="testimonials-grid">
+      <!-- Modified testimonial structure -->
+      <div class="testimonial-card">
+        <p class="testimonial-text">Pain itself is something to be experienced...</p>
+        <div class="testimonial-author">
+          <img src="../SDA_Personal_Profile/sonam.JPG" alt="Sonam Dorji" loading="lazy">
+          <h3>Sonam Dorji</h3>
+        </div>
+        <span class="quote-mark">"</span>
+      </div>
+      <!-- Repeat structure for other testimonials -->
+      <!-- ... -->
+    </div>
+  </section>
+
+  <!-- Recent Work Section -->
+  <section class="recent-work">
+    <div class="section-header">
+      <h2>Recent Work</h2>
+      <p>I have been solving user and business problems...</p>
+    </div>
+    <div class="work-cards">
+      <!-- Modified work card structure -->
+      <div class="work-card">
+        <img src="../SDA_Personal_Profile/netflix.webp" alt="Netflix Project" loading="lazy">
+        <div class="work-card-content">
+          <h3>Netflix Project</h3>
+          <h4>UI/UX Redesign</h4>
+          <p>The Netflix Figma project features...</p>
+          <a href="#" class="btn">Know more ></a>
+        </div>
+      </div>
+      <!-- Repeat structure for other work cards -->
+      <!-- ... -->
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="contact-container">
+      <h2>Get In Touch</h2>
+      <p>Learning and improving yourself is important...</p>
+      <form class="contact-form">
+        <input type="email" name="email" placeholder="Please enter your email" required>
+        <input type="tel" name="mobile" placeholder="Enter mobile" required>
+        <textarea name="message" rows="5" placeholder="Enter your message" required></textarea>
+        <button type="submit" class="btn">Submit →</button>
+      </form>
+    </div>
+    <footer>
+      <p>&copy; 2024 [UGYEN]. All Rights Reserved. <span class="heart">♥</span></p>
+    </footer>
+  </section>
+
+  <!-- Add JavaScript for mobile navigation -->
   <script>
-    const progressValue = document.querySelector('.progress-value');
-    const circularProgress = document.querySelector('.circular-progress');
+    document.getElementById('navToggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
 
-    let progressStartValue = 0,
-        progressEndValue = 78, // You can modify this to any percentage value.
-        speed = 50;
-
-    let progress = setInterval(() => {
-      progressStartValue++;
-      
-      // Update percentage text
-      progressValue.textContent = `${progressStartValue}%`;
-
-      // Update the circular progress by modifying its background
-      circularProgress.style.background = `conic-gradient(
-        #00ff00 ${progressStartValue * 3.6}deg, /* Adjust the angle */
-        #000000 ${progressStartValue * 3.6}deg /* Ensure the remaining part is black */
-      )`;
-      
-      if (progressStartValue === progressEndValue) {
-        clearInterval(progress);
-      }
-    }, speed);
-  </script>
-     <script>
-      // JavaScript to redirect after a delay
-      document.addEventListener("DOMContentLoaded", function() {
-          setTimeout(function() {
-              window.location.href = "2.html"; // 
-          }, 5000); // Delay in milliseconds (e.g., 5000 ms = 5 seconds)
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.remove('active');
       });
+    });
+
+    // Your existing Enter key navigation
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        window.location.href = "6.html";
+      }
+    });
   </script>
 </body>
 </html>
