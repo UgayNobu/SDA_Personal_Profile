@@ -201,7 +201,7 @@ nav a {
   .container {
     flex-direction: column;
     padding: 30px;
-  }
+ }
 
   .profile-text, .profile-image {
     max-width: 100%;
