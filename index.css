@@ -39,7 +39,7 @@ nav a {
 .profile-text h1 {
   font-size: 3.5rem;
   margin-bottom: 20px;
-  color: #fff;
+  color: #fff; /* Changed to white */
 }
 
 .profile-text p {
@@ -80,6 +80,12 @@ nav a {
 .btn:hover {
   background-color: #0ab100;
   transform: translateY(-2px);
+}
+
+/* Worked With Section */
+.worked-with {
+  text-align: center;
+  padding: 40px 0;
 }
 
 .worked-with h3 {
